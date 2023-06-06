@@ -1,0 +1,139 @@
+.hammenu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    height: calc(100vh - 120px);
+    gap: 40px;
+    position: fixed;
+    top: 120px;
+    background: #f3f2f3;
+    z-index: 10;
+
+        .navItems{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            opacity: .7;
+        }
+}
+
+.navbar{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    max-width: 1280px;
+    margin: auto;
+    width: 100%;
+
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .hamburger{
+                display: none;
+            }
+            .logo{
+                font-size: 32px;
+                font-weight: 900;
+            }
+        }
+
+        .center{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            padding-left: 100px;
+
+                .navItems{
+                    font-size: 16px;
+                    font-weight: 500;
+                    opacity: .7;
+                    cursor: pointer;
+                }
+        }
+
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+                .icons{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                        .icon{
+                            cursor: pointer;
+                            opacity: .6;
+                        }
+                }
+
+                .line{
+                    border: 1px solid black;
+                    height: 25px;
+                    opacity: .4;
+                }
+
+                .action{
+                    span{
+                        font-weight: 900;
+                        cursor: pointer;
+                    }
+                }
+        }
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #f3f2f3;
+        z-index: 9;
+        .left{
+            .hamburger{
+                display: block;
+            }
+        }
+
+        .center{
+            .navItems{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .hammenu{
+        top: 60px;
+    }
+    .navbar{
+        padding: 20px;
+
+        .right{
+            .line{
+                display: none;
+            }
+
+            .action{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .navbar{
+        .left{
+            .logo{
+                display: none;
+            }
+        }
+    }
+}
